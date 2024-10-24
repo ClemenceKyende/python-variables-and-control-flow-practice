@@ -1,19 +1,24 @@
-# Triangle Type Checker
-# Asking for user input
-side1 = float(input("Enter length of side 1: "))
-side2 = float(input("Enter length of side 2: "))
-side3 = float(input("Enter length of side 3: "))
+def triangle_type_checker(side1, side2, side3):
+    """
+    Determine the type of triangle based on the lengths of its sides.
 
-# Validating the triangle inequality theorem
-if side1 <= 0 or side2 <= 0 or side3 <= 0:
-    print("Lengths must be positive numbers.")
-elif side1 + side2 <= side3 or side1 + side3 <= side2 or side2 + side3 <= side1:
-    print("These lengths do not form a triangle.")
-else:
-    # Determining triangle type
+    Args:
+    side1 (float): Length of side 1.
+    side2 (float): Length of side 2.
+    side3 (float): Length of side 3.
+
+    Returns:
+    None
+    """
     if side1 == side2 == side3:
-        print("The triangle is Equilateral.")
+        print("Equilateral")
     elif side1 == side2 or side1 == side3 or side2 == side3:
-        print("The triangle is Isosceles.")
+        print("Isosceles")
     else:
-        print("The triangle is Scalene.")
+        print("Scalene")
+
+if __name__ == "__main__":
+    s1 = float(input("Enter length of side 1: "))
+    s2 = float(input("Enter length of side 2: "))
+    s3 = float(input("Enter length of side 3: "))
+    triangle_type_checker(s1, s2, s3)

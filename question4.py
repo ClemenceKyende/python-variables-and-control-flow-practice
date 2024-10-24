@@ -1,24 +1,33 @@
-# Simple Calculator with Conditionals
-# Asking for user input
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-operation = input("Enter operation (+, -, *, /): ")
+def simple_calculator(num1, num2, operation):
+    """
+    Perform basic arithmetic operations based on user input.
 
-# Performing the operation
-if operation == "+":
-    result = num1 + num2
-    print(f"The result of {num1} + {num2} is: {result}")
-elif operation == "-":
-    result = num1 - num2
-    print(f"The result of {num1} - {num2} is: {result}")
-elif operation == "*":
-    result = num1 * num2
-    print(f"The result of {num1} * {num2} is: {result}")
-elif operation == "/":
-    if num2 != 0:  # Check for division by zero
-        result = num1 / num2
-        print(f"The result of {num1} / {num2} is: {result}")
+    Args:
+    num1 (float): The first number.
+    num2 (float): The second number.
+    operation (str): The operation to perform (+, -, *, /).
+
+    Returns:
+    None
+    """
+    if operation == "+":
+        result = num1 + num2
+    elif operation == "-":
+        result = num1 - num2
+    elif operation == "*":
+        result = num1 * num2
+    elif operation == "/":
+        if num2 != 0:
+            result = num1 / num2
+        else:
+            result = "Undefined (division by zero)"
     else:
-        print("Error: Division by zero is not allowed.")
-else:
-    print("Invalid operation. Please enter one of +, -, *, /.")
+        result = "Invalid operation"
+
+    print(f"Result: {result}")
+
+if __name__ == "__main__":
+    first_num = float(input("Enter first number: "))
+    second_num = float(input("Enter second number: "))
+    op = input("Enter operation (+, -, *, /): ")
+    simple_calculator(first_num, second_num, op)

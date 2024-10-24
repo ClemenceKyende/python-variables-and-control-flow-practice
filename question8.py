@@ -1,25 +1,28 @@
-# Day of the Week Checker
-# Asking for user input
-day_number = int(input("Enter a number (1-7): "))
+def day_of_week_checker(day_number):
+    """
+    Check the day of the week based on the input number.
 
-# Checking the day of the week
-# Checking the day of the week
-if day_number == 1:
-    day_name = "Monday"
-elif day_number == 2:
-    day_name = "Tuesday"
-elif day_number == 3:
-    day_name = "Wednesday"
-elif day_number == 4:
-    day_name = "Thursday"
-elif day_number == 5:
-    day_name = "Friday"
-elif day_number == 6:
-    day_name = "Saturday"
-elif day_number == 7:
-    day_name = "Sunday"
-else:
-    day_name = "Invalid input."
+    Args:
+    day_number (int): The number representing the day (1-7).
 
-# Printing the result
-print(f"Day {day_number}: {day_name}")
+    Returns:
+    None
+    """
+    days = {
+        1: "Monday",
+        2: "Tuesday",
+        3: "Wednesday",
+        4: "Thursday",
+        5: "Friday",
+        6: "Saturday",
+        7: "Sunday"
+    }
+
+    if day_number in days:
+        print(days[day_number])
+    else:
+        print("Invalid input.")
+
+if __name__ == "__main__":
+    day_num = int(input("Enter a number (1-7): "))
+    day_of_week_checker(day_num)
