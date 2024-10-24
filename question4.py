@@ -7,14 +7,18 @@ operation = input("Enter operation (+, -, *, /): ")
 # Performing the operation
 if operation == "+":
     result = num1 + num2
+    print(f"The result of {num1} + {num2} is: {result}")
 elif operation == "-":
     result = num1 - num2
+    print(f"The result of {num1} - {num2} is: {result}")
 elif operation == "*":
     result = num1 * num2
+    print(f"The result of {num1} * {num2} is: {result}")
 elif operation == "/":
-    result = num1 / num2 if num2 != 0 else "Undefined (division by zero)"
+    if num2 != 0:  # Check for division by zero
+        result = num1 / num2
+        print(f"The result of {num1} / {num2} is: {result}")
+    else:
+        print("Error: Division by zero is not allowed.")
 else:
-    result = "Invalid operation"
-
-# Printing the result
-print("Result:", result)
+    print("Invalid operation. Please enter one of +, -, *, /.")

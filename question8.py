@@ -3,19 +3,23 @@
 day_number = int(input("Enter a number (1-7): "))
 
 # Checking the day of the week
+# Checking the day of the week
 if day_number == 1:
-    print("Monday")
+    day_name = "Monday"
 elif day_number == 2:
-    print("Tuesday")
+    day_name = "Tuesday"
 elif day_number == 3:
-    print("Wednesday")
+    day_name = "Wednesday"
 elif day_number == 4:
-    print("Thursday")
+    day_name = "Thursday"
 elif day_number == 5:
-    print("Friday")
+    day_name = "Friday"
 elif day_number == 6:
-    print("Saturday")
+    day_name = "Saturday"
 elif day_number == 7:
-    print("Sunday")
+    day_name = "Sunday"
 else:
-    print("Invalid input.")
+    day_name = "Invalid input."
+
+# Printing the result
+print(f"Day {day_number}: {day_name}")

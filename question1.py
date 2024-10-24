@@ -10,7 +10,7 @@ multiplication = a * b
 division = a / b
 
 # Printing results
-print("Addition:", addition)
-print("Subtraction:", subtraction)
-print("Multiplication:", multiplication)
-print("Division:", division)
+print(f"The result of adding {a} and {b} is: {addition}")
+print(f"The result of subtracting {b} from {a} is: {subtraction}")
+print(f"The result of multiplying {a} by {b} is: {multiplication}")
+print(f"The result of dividing {a} by {b} is: {division}")

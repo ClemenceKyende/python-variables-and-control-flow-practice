@@ -4,14 +4,14 @@ score = int(input("Enter your score (0-100): "))
 
 # Categorizing the grade
 if 90 <= score <= 100:
-    print("Grade: A")
+    print(f"With a score of {score}, you earned a Grade: A")
 elif 80 <= score < 90:
-    print("Grade: B")
+    print(f"With a score of {score}, you earned a Grade: B")
 elif 70 <= score < 80:
-    print("Grade: C")
+    print(f"With a score of {score}, you earned a Grade: C")
 elif 60 <= score < 70:
-    print("Grade: D")
+    print(f"With a score of {score}, you earned a Grade: D")
 elif 0 <= score < 60:
-    print("Grade: F")
+    print(f"With a score of {score}, you earned a Grade: F")
 else:
-    print("Invalid score")
+    print(f"{score} is an invalid score. Please enter a score between 0 and 100.")
